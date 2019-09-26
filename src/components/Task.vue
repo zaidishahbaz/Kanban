@@ -1,7 +1,7 @@
 <template>
   <div class="has-text-centered icons">
     <div class="uk-alert-default" uk-alert>
-      <p>Learn Node</p>
+      <p>{{task.title}}</p>
     </div>
     <button class="uk-button uk-button-primary uk-button-small">Edit</button>
     <span style="margin:2px"></span>
@@ -11,6 +11,7 @@
 
 <script>
 export default {
-  name: "Task"
+  name: "Task",
+  props: ["task"]
 };
 </script>

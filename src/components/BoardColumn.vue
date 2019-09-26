@@ -1,15 +1,15 @@
 <template>
   <div class="uk-card uk-card-default uk-card-body" id="todo-col">
-    <h3>{{ name }}</h3>
+    <h3>{{ col.name }}</h3>
 
-    <Task />
+    <Task v-for="task in col.tasks" :task="task" :key="task.id" />
   </div>
 </template>
 <script>
-import Task from "./Task";
+import Task from "./Task.vue";
 export default {
   name: "BoardColumn",
-  props: ["name"],
+  props: ["col"],
   components: {
     Task
   }
